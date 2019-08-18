@@ -1,0 +1,42 @@
+@import './../../App.scss';
+//Header ::content
+.header-content {
+  text-align: center;
+  padding-top: 10%;
+  h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+  p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.btn {
+  &-main {
+    @extend %btn-shared;
+    color: $black-color;
+    background-color: $main-color;
+  }
+  &-light {
+    @extend %btn-shared;
+    color: $black-color;
+    background-color: $light-color;
+    border-radius: 50%;
+  }
+  &-dark {
+    @extend %btn-shared;
+    color: $black-color;
+    background-color: $dark-color;
+  }
+}
+//This would apply to any class with 'btn-'
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
+  background-color: $orange-color;
+}
+.text-center {
+  text-align: center;
+}

@@ -1,0 +1,10 @@
+@import '../../App.scss';
+
+//header
+#header {
+  &-home {
+    background: $bg-image no-repeat center right / cover;
+    height: 100vh;
+    color: $green-color;
+  }
+}

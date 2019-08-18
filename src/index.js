@@ -1,8 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+import { faFileAlt, faDesktop, faObjectUngroup, faThumbsUp, faUsers, faAward, faHourglassStart, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
+library.add(fab,faFileAlt, faDesktop, faObjectUngroup, faThumbsUp, faUsers, faAward, faHourglassStart, faCodeBranch);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -1,0 +1,62 @@
+@import '../../App.scss';
+
+#home {
+  &-c {
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+      text-align: center;
+      i {
+        transition: all 1s;
+        &:hover {
+          .process-step {
+            background-color: $dark-color;
+          }
+        }
+      }
+      &-step {
+        position:absolute;
+        //bottom: 0;
+         // top: 0;
+          //left: 1000px;
+        font-size: 28px;
+        background-color: $orange-color;
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        padding: 1rem;
+        color: $white-color;
+        z-index: 1;
+        transition: all 1s;
+      }
+      &-icon {
+        border-radius: 50%;
+        background: $dark-color;
+        color: $white-color;
+        padding: 2rem;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        position: relative;
+        right: 39px;
+        transition: all 1s;
+        &:hover {
+          background-color: $orange-color;
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+        }
+      }
+    }
+  }
+}
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background: $orange-color;
+  display: block;
+  margin: 0 auto 1rem auto;
+}

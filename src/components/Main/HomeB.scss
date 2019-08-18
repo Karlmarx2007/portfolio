@@ -1,0 +1,29 @@
+@import '../../App.scss';
+#home {
+  &-b {
+    .stats {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+      li {
+        line-height: 2;
+        &.stats-title {
+          font-size: 1.5em;
+        }
+        &.stats-number {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+      }
+      div {
+        padding: 3rem 0;
+        &:nth-child(odd) {
+          background-color: $light-color;
+        }
+        &:nth-child(even) {
+          background-color: $medium-color;
+        }
+      }
+    }
+  }
+}

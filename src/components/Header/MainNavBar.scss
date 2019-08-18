@@ -1,0 +1,48 @@
+@import '../../App.scss';
+
+//Main Nav Bar
+#main-nav {
+  display:flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  ul {
+    display: flex;
+    a {
+      text-transform: capitalize;
+      color: $orange-color;
+      border-bottom: 3px solid transparent;
+      padding-bottom: 0.5rem;
+      transition: border-color 1s;
+      &:hover {
+        border-color: $medium-color;
+      }
+      &.current {
+        border-color: $orange-color;
+      }
+    }
+  }
+  li {
+    padding: 1rem;
+  }
+
+}
+//logo
+#logo {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  font-size: 2rem;
+  color: $white-color;
+  text-transform: uppercase;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  padding: 2px;
+  transition: all 0.5s;
+  &:hover {
+    border-color: $light-color;
+  }
+}
+img {
+  width: 100%;
+}

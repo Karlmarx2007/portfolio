@@ -1,0 +1,57 @@
+@import './index.scss';
+//General Styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+   max-width: $website-width;
+   padding: 0 1.5rem;
+   margin: auto;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Dosis', sans-serif;
+  line-height: 1.6;
+  background: $white-color;
+}
+//To be shared by all buttons
+%btn-shared {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h2, h3, h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%
+}
+
+.lead {
+  border-bottom: 3px solid $light-color;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.sectiion-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}

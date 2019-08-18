@@ -1,0 +1,22 @@
+//Variables
+$website-width: 1000px;
+$main-color: #ffbc00;
+$light-color: #f4f4f4;
+$dark-color: #333;
+$medium-color: #ccc;
+$orange-color: #ff3d00;
+$black-color: #000;
+$white-color: #fff;
+$green-color: #00ffc6;
+$bg-image: url('C:/Users/Karl Matuke/projects/myPortfolio/portfolio/src/dist/img/showcase.png');
+$km-logo: url('C:/Users/Karl Matuke/projects/myPortfolio/portfolio/src/dist/img/km.png');
+//$bg-image: url('src/assets/showcase.png');
+
+@function set-text-color($color) {
+  @if(lightness($color) > 50) {
+    @return $black-color;
+  }
+  @else {
+    @return $white-color;
+  }
+}
