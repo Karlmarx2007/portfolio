@@ -2,9 +2,11 @@ import React, {Component} from 'react';
 import './TypeEffect.scss';
 
 class TypeEffect extends Component {
+
   constructor(props) {
     super(props);
     this.qualities = ['Engineer', 'Designer', 'Voracious Reader', 'Lifelong learner'];
+    this._isMounted = false;
     this.state = {
       index: 0,
       displayWord: '',
@@ -13,24 +15,27 @@ class TypeEffect extends Component {
     };
   }
   componentDidMount() {
+    this._isMounted = true;
     this.print();
   }
   print = () => {
-    let word = this.qualities[this.state.index];
-    let positiveTxt;
+    if (this._isMounted) {
+      let word = this.qualities[this.state.index];
+      let positiveTxt;
 
-    //Check if state is deleting
-    if (this.state.isDeleting) {
-      positiveTxt = word.substr(0, this.state.displayWord.length - 1);
-      this.deleteLetter(positiveTxt, word);
-    }
-    else {
-      positiveTxt= word.substr(0, this.state.displayWord.length + 1);
-      this.addLetter(positiveTxt, word)
-    }
-    //Check if displayWord is complete, set isDeleting to true
-    if (this.state.displayWord === word) {
-      this.setState({...this.state, isDeleting: true});
+      //Check if state is deleting
+      if (this.state.isDeleting) {
+        positiveTxt = word.substr(0, this.state.displayWord.length - 1);
+        this.deleteLetter(positiveTxt, word);
+      }
+      else {
+        positiveTxt= word.substr(0, this.state.displayWord.length + 1);
+        this.addLetter(positiveTxt, word)
+      }
+      //Check if displayWord is complete, set isDeleting to true
+      if (this.state.displayWord === word) {
+        this.setState({...this.state, isDeleting: true});
+      }
     }
   }
   addLetter = (halfTxt, fulWord) => {
@@ -60,7 +65,9 @@ class TypeEffect extends Component {
     }
     setTimeout((this.setState({displayWord: halfTxt}), this.print), this.state.typeSpeed);
   }
-
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
   render() {
     return (
       <span className='txt'>{this.state.displayWord}</span>

@@ -1,0 +1,11 @@
+@import '../../../App.scss';
+
+//header
+#header {
+  &-iner {
+    background: $bg-image no-repeat 30% 5% / cover;
+    height: 5rem;
+    color: $green-color;
+    border-bottom: 3px solid $orange-color;
+  }
+}

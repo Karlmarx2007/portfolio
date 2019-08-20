@@ -1,4 +1,4 @@
-@import '../../App.scss';
+@import '../../../App.scss';
 
 #home {
   &-c {
@@ -52,11 +52,4 @@
       }
     }
   }
-}
-.bottom-line {
-  height: 2px;
-  width: 3rem;
-  background: $orange-color;
-  display: block;
-  margin: 0 auto 1rem auto;
 }

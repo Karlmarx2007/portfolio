@@ -1,15 +1,16 @@
 import React from 'react';
 import './MainNavBar.scss';
+import {Link} from 'react-router-dom';
 
-const MainNavBar = () => {
+const MainNavBar = (props) => {
   return (
       <nav id='main-nav'>
-        <a id='logo' href='/'>k m</a>
+        <Link id='logo' to="/">k m</Link>
         <ul>
-          <li><a href='home.html' className='current'>Home</a></li>
-          <li><a href='about.html'>About</a></li>
-          <li><a href='work.html'>Work</a></li>
-          <li><a href='contact.html'>Contact</a></li>
+          <li><Link className={props.home} to="/">Home</Link></li>
+          <li><Link className={props.about} to="/about">About</Link></li>
+          <li><Link className={props.work} to="/">Work</Link></li>
+          <li><Link className={props.contact} to="/">Contact</Link></li>
         </ul>
       </nav>
   );
