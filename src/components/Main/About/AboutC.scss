@@ -1,0 +1,7 @@
+#about-c {
+  .about-logos {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 6rem;
+  }
+}

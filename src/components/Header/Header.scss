@@ -3,8 +3,9 @@
 //header
 #header {
   &-home {
-    background: $bg-image no-repeat center right / cover;
+    background: $bg-image no-repeat center 1% / cover;
     height: 100vh;
     color: $green-color;
+    border-bottom: 3px solid red;
   }
 }
