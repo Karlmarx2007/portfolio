@@ -22,3 +22,10 @@
     margin-right: 0.5rem;
   }
 }
+//Smart Phones
+@media(max-width: 500px) {
+  #about-d .testimonials,
+  .items {
+    grid-template-columns: 1fr;
+  }
+}

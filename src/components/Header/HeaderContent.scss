@@ -12,31 +12,6 @@
     margin-bottom: 2rem;
   }
 }
-
-.btn {
-  &-main {
-    @extend %btn-shared;
-    color: $black-color;
-    background-color: $main-color;
-  }
-  &-light {
-    @extend %btn-shared;
-    color: $black-color;
-    background-color: $light-color;
-    border-radius: 50%;
-  }
-  &-dark {
-    @extend %btn-shared;
-    color: $black-color;
-    background-color: $dark-color;
-  }
-}
-//This would apply to any class with 'btn-'
-button[class^='btn-']:hover,
-a[class^='btn-']:hover,
-input[class^='btn-']:hover {
-  background-color: $orange-color;
-}
-.text-center {
-  text-align: center;
+.btn-light {
+  border-radius: 50%;
 }

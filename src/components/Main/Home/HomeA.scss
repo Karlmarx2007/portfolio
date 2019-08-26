@@ -14,3 +14,22 @@
     }
   }
 }
+//Smart Phones
+@media(max-width: 500px) {
+  #home-a .specials
+  .items {
+    grid-template-columns: 1fr;
+  }
+  #home {
+    &-a {
+      .specials div {
+        border-bottom: 1px $light-color solid;
+        padding-bottom: 1rem;
+        &:last-child {
+          border: none;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}

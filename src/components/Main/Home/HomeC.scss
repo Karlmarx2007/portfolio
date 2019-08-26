@@ -53,3 +53,13 @@
     }
   }
 }
+.icon-title {
+  left: 100px;
+}
+//Smart Phones
+@media(max-width: 500px) {
+  #home-c .process,
+  .items {
+    grid-template-columns: 1fr;
+  }
+}

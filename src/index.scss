@@ -8,10 +8,8 @@ $orange-color: #ff3d00;
 $black-color: #000;
 $white-color: #fff;
 $green-color: #10753c;
-//$green-color: #00ffc6;
-$bg-image: url('C:/Users/Karl Matuke/projects/myPortfolio/portfolio/src/dist/img/karl2.png');
-$km-logo: url('C:/Users/Karl Matuke/projects/myPortfolio/portfolio/src/dist/img/km.png');
-//$bg-image: url('src/assets/showcase.png');
+$img-path: '';
+$bg-image: url(/karl2.png);
 
 @function set-text-color($color) {
   @if(lightness($color) > 50) {

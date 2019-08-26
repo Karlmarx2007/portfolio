@@ -5,3 +5,10 @@
     grid-gap: 6rem;
   }
 }
+
+//Smart Phones
+@media(max-width: 500px) {
+  #about-c {
+    display: none;
+  }
+}

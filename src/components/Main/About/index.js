@@ -1,24 +1,20 @@
 import React from 'react';
-import MainNavBar from '../../Header/MainNavBar';
+import HeaderIner from '../../Header/HeaderIner';
 import Footer from './../../Footer/Footer.js';
 import AboutA from './AboutA';
 import AboutB from './AboutB';
 import AboutC from './AboutC';
-import AboutD from './AboutD';
-import './index.scss';
+//import AboutD from './AboutD';
 
 const About = () => {
   return (
     <div>
-      <header id='header-iner'>
-        <div className='container'>
-          <MainNavBar about='current'/>
-        </div>
-      </header>
+      {/*current would be used to style Contact when selected on MainNavBar*/}
+      <HeaderIner about='current'/>
       <AboutA />
       <AboutB />
       <AboutC />
-      <AboutD />
+      {/*<AboutD />*/}
       <Footer />
     </div>
   );

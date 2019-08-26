@@ -1,0 +1,28 @@
+@import '../../../App.scss';
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+//Smart Phones
+@media(max-width: 500px) {
+  #contact-b {
+    .contact-info {
+      grid-template-columns: 1fr;
+      div {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px #ffe5cc solid;
+        &:last-child {
+          border: none;
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}

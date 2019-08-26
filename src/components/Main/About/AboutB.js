@@ -7,27 +7,27 @@ const AboutB = () => {
       <div className='container'>
         <h2 className='section-title'>Technical skills</h2>
         <div className='bottom-line'></div>
-        <h4>JavaScript: </h4>
+        <h4>JavaScript </h4>
         <div className='progress'>
-          <div style={{width: '90%'}}>90%</div>
+          <div style={{width: '95%'}}>95%</div>
         </div>
-        <h4>ReactJS: </h4>
+        <h4>ReactJS</h4>
         <div className='progress'>
-          <div style={{width: '80%'}}>80%</div>
+          <div style={{width: '85%'}}>85%</div>
         </div>
-        <h4>HTML: </h4>
+        <h4>HTML</h4>
         <div className='progress'>
           <div style={{width: '98%'}}>98%</div>
         </div>
-        <h4>CSS/SASS: </h4>
+        <h4>CSS/SASS</h4>
         <div className='progress'>
-          <div style={{width: '75%'}}>75%</div>
+          <div style={{width: '85%'}}>85%</div>
         </div>
-        <h4>JAVA: </h4>
+        <h4>JAVA</h4>
         <div className='progress'>
           <div style={{width: '70%'}}>70%</div>
         </div>
-        <h4>NodeJS: </h4>
+        <h4>NodeJS</h4>
         <div className='progress'>
           <div style={{width: '70%'}}>70%</div>
         </div>

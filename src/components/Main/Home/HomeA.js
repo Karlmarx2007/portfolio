@@ -1,5 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './HomeA.scss';
 
 const HomeA = () => {
@@ -8,8 +8,8 @@ const HomeA = () => {
       <div className='container'>
         <h2 className='section-title'>I Specilize in</h2>
         <div className='bottom-line'></div>
-        <p className='lead'>Front and Backend Web Development</p>
-        <div className='specials'>
+        <p className='lead'>Web & Mobile Application Development</p>
+        {/* <div className='specials'>
           <div>
             <FontAwesomeIcon icon="file-alt" size='2x' className='fas'/>
             <h3>Concepting</h3>
@@ -30,7 +30,7 @@ const HomeA = () => {
             <h3>Interaction</h3>
             <p>HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

@@ -35,3 +35,25 @@
     }
   }
 }
+//Smart Phones
+@media(max-width: 500px) {
+  #about {
+    &-a {
+      .about-info {
+        grid-template-areas:
+          'bioimage'
+          'bio'
+          'aw1'
+          'aw2'
+          'aw3';
+        .bio-image {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}

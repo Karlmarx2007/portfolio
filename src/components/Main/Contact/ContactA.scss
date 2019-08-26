@@ -1,0 +1,55 @@
+@import '../../../App.scss';
+
+#contact {
+  &-a {
+    .text-fields {
+      display: grid;
+      grid-template-areas:
+        'name email'
+        'subject phone'
+        'message message';
+      grid-gap: 1.2rem;
+      margin-bottom: 1.2rem;
+      .name-input {
+        grid-area: name;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .phone-input {
+        grid-area: phone;
+      }
+      .message-input {
+        grid-area: message;
+        height: 100px;
+      }
+      .text-input {
+        padding: 0.5rem 1rem;
+      }
+    }
+    button[type='submit'] {
+      width: 50%;
+      border-radius: 50%;
+    }
+  }
+}
+//Smart Phones
+@media(max-width: 500px) {
+  #contact {
+    &-a {
+        .text-fields {
+           display: grid;
+          // grid-template-columns: 1fr;
+          grid-template-areas:
+            'name'
+            'subject'
+            'email'
+            'phone'
+            'message';
+      }
+    }
+  }
+}

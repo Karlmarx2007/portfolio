@@ -1,6 +1,7 @@
 import React from 'react';
 import './HeaderContent.scss';
 import TypeEffect from './TypeEffect';
+import {Link} from 'react-router-dom';
 
 const HeaderContent = () => {
 
@@ -10,7 +11,7 @@ const HeaderContent = () => {
         <TypeEffect />
       </h1>
       <p className='lead'>I specialize in Front End Software Development</p>
-      <a href='work.html' className='btn-light'>View My Work</a>
+      <Link className='btn-light' to="/work">View My Work</Link>
     </div>
   );
 }

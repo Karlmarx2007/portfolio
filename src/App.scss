@@ -65,8 +65,8 @@ img {
 //Backgrounds
 .bg {
   &-main {
-    background: $main-color;
-    color: set-text-color($main-color)
+    background: $orange-color;
+    color: set-text-color($orange-color)
   }
   &-dark {
     background: $dark-color;
@@ -108,4 +108,34 @@ img {
   &-2 { padding: 2rem 0; }
   &-3 { padding: 3rem 0; }
   &-4 { padding: 4rem 0; }
+}
+
+//buttons
+
+
+.btn {
+  &-main {
+    @extend %btn-shared;
+    color: $black-color;
+    background-color: $main-color;
+  }
+  &-light {
+    @extend %btn-shared;
+    color: $black-color;
+    background-color: $light-color;
+  }
+  &-dark {
+    @extend %btn-shared;
+    color: $light-color;
+    background-color: $dark-color;
+  }
+}
+//This would apply to any class with 'btn-'
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
+  background-color: $orange-color;
+}
+.text-center {
+  text-align: center;
 }

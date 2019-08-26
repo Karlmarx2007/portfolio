@@ -5,11 +5,10 @@ import * as serviceWorker from './serviceWorker';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import Routes from './components/Routing/Routes';
 
-import { faFileAlt, faDesktop, faObjectUngroup, faThumbsUp, faUsers, faAward, faHourglassStart, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
+import { faFileAlt, faDesktop, faObjectUngroup, faThumbsUp, faUsers, faAward, faHourglassStart, faCodeBranch, faEnvelope, faPhone, faAddressCard } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
-library.add(fab,faFileAlt, faDesktop, faObjectUngroup, faThumbsUp, faUsers, faAward, faHourglassStart, faCodeBranch);
-
+library.add(fab,faFileAlt, faDesktop, faObjectUngroup, faThumbsUp, faUsers, faAward, faHourglassStart, faCodeBranch, faEnvelope, faPhone, faAddressCard);
 ReactDOM.render(<Routes />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

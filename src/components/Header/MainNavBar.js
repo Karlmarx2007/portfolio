@@ -9,8 +9,8 @@ const MainNavBar = (props) => {
         <ul>
           <li><Link className={props.home} to="/">Home</Link></li>
           <li><Link className={props.about} to="/about">About</Link></li>
-          <li><Link className={props.work} to="/">Work</Link></li>
-          <li><Link className={props.contact} to="/">Contact</Link></li>
+          <li><Link className={props.work} to="/work">Work</Link></li>
+          <li><Link className={props.contact} to="/contact">Contact</Link></li>
         </ul>
       </nav>
   );

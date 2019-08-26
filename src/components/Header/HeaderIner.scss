@@ -1,0 +1,34 @@
+@import '../../App.scss';
+
+//header
+#header {
+  &-iner {
+    background: $bg-image no-repeat 30% 5% / cover;
+    height: 5rem;
+    color: $green-color;
+    border-bottom: 3px solid $orange-color;
+  }
+  .current {
+    border-bottom: 3px solid $orange-color;
+  }
+  .active {
+    border-bottom: 3px solid $orange-color;
+  }
+}
+//Smart Phones
+@media(max-width: 500px) {
+  #header {
+    &-home {
+      height: 10rem;
+      border-bottom: 3px solid $orange-color;
+      background-position: 30% 5%;
+      .header-content {
+        display: none;
+      }
+    }
+    &-iner {
+      height: 10rem;
+      background-position: 30% 5%;
+    }
+  }
+}

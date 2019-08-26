@@ -5,7 +5,7 @@ class TypeEffect extends Component {
 
   constructor(props) {
     super(props);
-    this.qualities = ['Engineer', 'Designer', 'Voracious Reader', 'Lifelong learner'];
+    this.qualities = ['Software Engineer', 'Designer', 'Voracious Reader', 'Lifelong learner'];
     this._isMounted = false;
     this.state = {
       index: 0,
