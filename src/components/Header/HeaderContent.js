@@ -10,7 +10,7 @@ const HeaderContent = () => {
       <h1>I am Karl the &nbsp;
         <TypeEffect />
       </h1>
-      <p className='lead'>I specialize in Front End Software Development</p>
+      <p className='lead'>I specialize in Full Stack Software Development</p>
       <Link className='btn-light' to="/work">View My Work</Link>
     </div>
   );

@@ -12,22 +12,30 @@
       margin-bottom: 1.2rem;
       .name-input {
         grid-area: name;
+        width: 93%;
+        padding: 0.5rem 1rem;
       }
       .email-input {
         grid-area: email;
+        width: 93%;
+        padding: 0.5rem 1rem;
       }
       .subject-input {
         grid-area: subject;
+        width: 93%;
+        padding: 0.5rem 1rem;
       }
       .phone-input {
         grid-area: phone;
+        width: 93%;
+        padding: 0.5rem 1rem;
       }
       .message-input {
         grid-area: message;
         height: 100px;
       }
-      .text-input {
-        padding: 0.5rem 1rem;
+      .warning {
+        color: $orange-color;
       }
     }
     button[type='submit'] {

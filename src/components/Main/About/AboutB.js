@@ -11,25 +11,25 @@ const AboutB = () => {
         <div className='progress'>
           <div style={{width: '95%'}}>95%</div>
         </div>
-        <h4>ReactJS</h4>
+        <h4>React</h4>
         <div className='progress'>
-          <div style={{width: '85%'}}>85%</div>
+          <div style={{width: '93%'}}>93%</div>
         </div>
-        <h4>HTML</h4>
+        <h4>Angular</h4>
         <div className='progress'>
-          <div style={{width: '98%'}}>98%</div>
+          <div style={{width: '90%'}}>90%</div>
         </div>
-        <h4>CSS/SASS</h4>
+        <h4>CSS / SASS</h4>
         <div className='progress'>
-          <div style={{width: '85%'}}>85%</div>
+          <div style={{width: '92%'}}>92%</div>
         </div>
-        <h4>JAVA</h4>
-        <div className='progress'>
-          <div style={{width: '70%'}}>70%</div>
+        <h4>BOOTSTRAP / STYLED COMPONENTS</h4>
+        <div className = 'progress' >
+          <div style = {{width: '92%'}}>92%</div>
         </div>
-        <h4>NodeJS</h4>
+        <h4>NodeJS / EXPRESS / SENECA</h4>
         <div className='progress'>
-          <div style={{width: '70%'}}>70%</div>
+          <div style={{width: '89%'}}>89%</div>
         </div>
       </div>
     </section>

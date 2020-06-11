@@ -11,6 +11,18 @@ $green-color: #10753c;
 $img-path: '';
 $bg-image: url(/karl2.png);
 
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #034638;
+}
+
 @function set-text-color($color) {
   @if(lightness($color) > 50) {
     @return $black-color;

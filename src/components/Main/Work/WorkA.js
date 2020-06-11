@@ -7,32 +7,33 @@ const WorkA = () => {
       <div className='container'>
         <h2 className='section-title'>My Work</h2>
         <div className='bottom-line'/>
-        {/* <p className='lead'>Checkout some of my work</p> */}
-        <p className='lead'>To be Updated Soon...</p>
-        {/*<div className='items'>
+        <p className='lead'>Checkout some of my work</p>
+        <div className='items'>
+          <a href = "https://sc.qccareerschool.com/">
+            <div className = 'item' >
+              <div className = 'item-image' >
+                <img src = {require('./../../../dist/img/items/qc.png')} alt = 'QC Career School'/>
+              </div>
+              <div className='item-text' >
+                <div className = 'item-text-wrap' >
+                  <p className='item-text-category'>Student Center</p>
+                  <h2 className='item-text-title'>QC Career School</h2>
+                </div>
+              </div>
+            </div>
+          </a>
           <div className='item'>
             <div className='item-image'>
-              <img src={require('./../../../dist/img/items/item1.png')} alt='item1'/>
+              <img src={require('./../../../dist/img/items/dispensary.png')} alt='item2'/>
             </div>
             <div className='item-text'>
               <div className='item-text-wrap'>
-                <p className='item-text-category'>Design</p>
-                <h2 className='item-text-title'>Great Gradients</h2>
+                <p className='item-text-category'>Dispensary</p>
+                <h2 className='item-text-title'>E-commerce web app</h2>
               </div>
             </div>
           </div>
-          <div className='item'>
-            <div className='item-image'>
-              <img src={require('./../../../dist/img/items/item2.png')} alt='item2'/>
-            </div>
-            <div className='item-text'>
-              <div className='item-text-wrap'>
-                <p className='item-text-category'>UI/UX</p>
-                <h2 className='item-text-title'>World Experience</h2>
-              </div>
-            </div>
-          </div>
-          <div className='item'>
+          {/* <div className='item'>
             <div className='item-image'>
               <img src={require('./../../../dist/img/items/item3.png')} alt='item3'/>
             </div>
@@ -108,8 +109,8 @@ const WorkA = () => {
                 <h2 className='item-text-title'>Friend Feed</h2>
               </div>
             </div>
-          </div>
-        </div> */}
+          </div> */}
+        </div>
       </div>
     </section>
   );

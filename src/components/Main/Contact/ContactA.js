@@ -1,103 +1,139 @@
-import React,{useState} from 'react';
+import {useFormik} from 'formik';
+import * as Yup from 'yup';
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
 import './ContactA.scss';
-
+import {message} from 'antd';
 
 const ContactA = () => {
-  //const [ error, setEror ] = useState('');
-  const [formState, setFormState ] = useState({
+  message.config({
+    top: 300,
+  });
+  const success = () => message.success('Your message has been successfully sent');
+  const [ formValues, setFormValues ] = useState({});
+  const phoneRegExp = /^\s*(?:\+?(\d{1,3}))?[- (]*(\d{3})[- )]*(\d{3})[- ]*(\d{4})(?: *[x/#]{1}(\d+))?\s*$/;
+  useEffect(() => {
+    
+    const sendEmail = async () => {
+      if (Object.keys(formValues).length) {
+        try {
+          const {data} = await axios.post('/api/portfolio/send-email', {
+            ...formValues
+          });
+          
+          
+          success();
+        } catch (error) {
+          console.log(error);
+        }
+        
+        
+      }
+    }
+    sendEmail();
+  }, [formValues])
+  const formik = useFormik({
+    initialValues: {
       name: '',
       email: '',
       subject: '',
       phoneNumber: '',
-      message: '',
-      errors: {
-        name: '',
-        email: '',
-        subject: '',
-        phoneNumber: '',
-        message: ''
-      }
+      message: ''
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required('*Required'),
+      email: Yup.string().email('Invalid email address').required('*Required'),
+      subject: Yup.string().required('*Required'),
+      phoneNumber: Yup.string().matches(phoneRegExp, 'Phone number is not valid').required('*Required'),
+      message: Yup.string().required('*Required'),
+    }),
+    onSubmit: values => {
+      alert(JSON.stringify(values, null, 2));
+      setFormValues(values);
+      formik.resetForm();
+      setFormValues({});
+    },
   });
-  // const formValid = (formErrors) => {
-  //   let valid = true;
-  //   Object.values(formErrors).forEach(val => {
-  //     val.length > 0 && (valid = false);
-  //   });
-  //   return valid;
-  // }
-  const handleChange = (e) => {
-    e.preventDefault();
-    const { name, value } = e.target;
-    let formErrors = formState.errors;
-    switch(name) {
-      case 'name':
-        formErrors.name = value.length === 0 ? 'please enter firstName' : '';
-        break;
-      case 'email':
-        formErrors.email = !validateEmail(value) || value.length === 0 ? 'please valid email' : '';
-        break;
-      case 'subject':
-        formErrors.subject = value.length === 0 ? 'please enter subject' : '';
-        break;
-      case 'phoneNumber':
-        formErrors.phoneNumber = !validatePhoneNumber || value.length === 0 ? 'please enter firstName' : '';
-        break;
-      case 'message':
-        formErrors.message = value.length === 0 ? 'please enter Message to send' : '';
-        break;
-      default:
-        break;
-    }
-    setFormState({...formState, [e.target.name]: e.target.value});
-  }
-  const validateEmail = email => {
-    var re = RegExp(/\S+@\S+\.\S+/);
-    return re.test(email);
-  }
-  const validatePhoneNumber = phoneNumber => {
-    var re = RegExp(/^\s*(?:\+?(\d{1,3}))?[- (]*(\d{3})[- )]*(\d{3})[- ]*(\d{4})(?: *[x/#]{1}(\d+))?\s*$/);
-    return re.test(phoneNumber);
-  }
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (formValid(formState.errors)) {
-  //     let data = {
-  //       name: formState.name,
-  //       email: formState.email,
-  //       subject: formState.subject,
-  //       phoneNumber: formState.phoneNumber,
-  //       message: formState.message
-  //     }
-  //     //Clear form
-  //     setFormState({
-  //       name: '',
-  //       email: '',
-  //       subject: '',
-  //       phoneNumber: '',
-  //       message: ''
-  //     });
-  //   }
-  //   else {
-  //     console.error('form has errors');
-  //   }
-  //
-  // }
+
   return (
     <section id='contact-a' className='text-center py-3'>
       <div className='container'>
         <h2 className='section-title'>Contact Me</h2>
         <div className='bottom-line'></div>
         <p className='lead'>Here's how I can be reached...</p>
-        <form method='post' data-netlify='true' data-netlify-recaptcha='true'>
+        <form onSubmit={formik.handleSubmit}>
           <div className='text-fields'>
-            <input type='text' name='name' onChange={ handleChange } className='text-input name-input' placeholder='Name...' />
-            <input type='email' name='email' onChange={ handleChange } className='text-input email-input' placeholder='Email...' />
-            <input type='text' name='subject' onChange={ handleChange } className='text-input subject-input' placeholder='Subject...' />
-            <input type='text' name='phoneNumber' onChange={ handleChange } className='text-input phone-input' placeholder='Phone Number...' />
-            <textarea type='text' name='message' onChange={ handleChange } className='text-input message-input' ></textarea>
-            <div className='my-2'>
-              <div data-netlify-recaptcha='true'></div>
+            <div className = 'text-input ' >
+             <input
+              type='text'
+              name='name'
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.name}
+              className='name-input'
+              placeholder='Name...' /> 
+              {formik.touched.name && formik.errors.name ?
+                (<div className='warning'> {formik.errors.name} </div>) : null
+              }
             </div>
+            <div className = 'text-input' >
+              <input
+                type='email'
+                name='email'
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.email}
+                className = 'email-input'
+                placeholder = 'Email...' / > 
+                {
+                  formik.touched.email && formik.errors.email ?
+                    (<div className='warning'> {formik.errors.email} </div>) : null
+                }
+            </div>
+            <div className='text-input' >
+              <input
+                type='text'
+                name='subject'
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.subject}
+                className='subject-input'
+                placeholder='Subject...' />
+              {
+                formik.touched.subject && formik.errors.subject ?
+                  ( <div className='warning'> {
+                      formik.errors.subject
+                    } </div>) : null
+                  }
+            </div>
+            <div className='text-input' >
+              <input
+                type='text'
+                name='phoneNumber'
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.phoneNumber}
+                className='phone-input'
+                placeholder='Phone Number...' />
+                {
+                  formik.touched.phoneNumber && formik.errors.phoneNumber ?
+                  (<div className='warning'> {
+                    formik.errors.phoneNumber
+                  } </div>) : null
+                }
+            </div>
+            <textarea
+              type='text'
+              name='message'
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.message}
+              className='text-input message-input' /> {
+                  formik.touched.message && formik.errors.message ?
+                  ( <div className='warning'> {
+                      formik.errors.message
+                    } </div>) : null
+                  }
           </div>
           <button type='submit' className='btn-dark' >Submit</button>
         </form>
