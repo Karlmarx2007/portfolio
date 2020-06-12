@@ -14,7 +14,7 @@ const AboutA = () => {
           <img src={require('./../../../dist/img/karl5.png')} alt='About KM' className='bio-image' />
           <div className='bio bg-light'>
             <h4>Your project is in safe hands</h4>
-            <p>Karl Matuke is a twenty something Software Developer who is not from Kumba, Cameroon.</p>
+            <p>Karl Matuke is a twenty something Software Developer based in Ottawa, Ontario.</p>
             <p>Karl is very passionate about developing web and mobile aplications</p>
             <br />
             <p>  He believes taking one step at a time would complete any undertaking.</p>

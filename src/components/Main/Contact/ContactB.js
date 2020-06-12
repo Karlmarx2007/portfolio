@@ -21,7 +21,7 @@ const ContactB = () => {
           <div>
             <FontAwesomeIcon icon="address-card" size='2x' className='fas'/>
             <h3>Address</h3>
-            <p>151 David Dr, Nepean ON.</p>
+            <p>007-15 Woodridge Crescent, Nepean ON.</p>
           </div>
         </div>
       </div>

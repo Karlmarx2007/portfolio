@@ -4,7 +4,7 @@ import Footer from './../../Footer/Footer.js';
 import AboutA from './AboutA';
 import AboutB from './AboutB';
 import AboutC from './AboutC';
-//import AboutD from './AboutD';
+import AboutD from './AboutD';
 
 const About = () => {
   return (
@@ -14,7 +14,7 @@ const About = () => {
       <AboutA />
       <AboutB />
       <AboutC />
-      {/*<AboutD />*/}
+      <AboutD />
       <Footer />
     </div>
   );

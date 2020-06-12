@@ -10,28 +10,28 @@ const HomeB = () => {
           <ul>
             <li><FontAwesomeIcon icon="users" size='3x' className='fas'/></li>
             <li className='stats-title'>Clients</li>
-            <li className='stats-number'>1</li>
+            <li className='stats-number'>3</li>
           </ul>
         </div>
         <div>
           <ul>
             <li><FontAwesomeIcon icon="award" size='3x' className='fas'/></li>
             <li className='stats-title'>Awards</li>
-            <li className='stats-number'>0</li>
+            <li className='stats-number'>-</li>
           </ul>
         </div>
         <div>
           <ul>
             <li><FontAwesomeIcon icon="hourglass-start" size='3x' className='fas'/></li>
-            <li className='stats-title'>Years Worked</li>
-            <li className='stats-number'>2.5</li>
+            <li className='stats-title'>Years of experience</li>
+            <li className='stats-number'>4</li>
           </ul>
         </div>
         <div>
           <ul>
             <li><FontAwesomeIcon icon="code-branch" size='3x' className='fas'/></li>
             <li className='stats-title'>Projects completed</li>
-            <li className='stats-number'>1</li>
+            <li className='stats-number'>4</li>
           </ul>
         </div>
       </div>
