@@ -17,7 +17,7 @@ const HomeB = () => {
           <ul>
             <li><FontAwesomeIcon icon="award" size='3x' className='fas'/></li>
             <li className='stats-title'>Awards</li>
-            <li className='stats-number'>0</li>
+            <li className='stats-number'>-</li>
           </ul>
         </div>
         <div>

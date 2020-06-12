@@ -9,7 +9,7 @@ const WorkA = () => {
         <div className='bottom-line'/>
         <p className='lead'>Checkout some of my work</p>
         <div className='items'>
-          <a href = "https://sc.qccareerschool.com/">
+          <a href = "https://sc.qccareerschool.com/" target="_blank">
             <div className = 'item' >
               <div className = 'item-image' >
                 <img src = {require('./../../../dist/img/items/qc.png')} alt = 'QC Career School'/>
@@ -22,94 +22,19 @@ const WorkA = () => {
               </div>
             </div>
           </a>
-          <div className='item'>
-            <div className='item-image'>
-              <img src={require('./../../../dist/img/items/dispensary.png')} alt='item2'/>
-            </div>
-            <div className='item-text'>
-              <div className='item-text-wrap'>
-                <p className='item-text-category'>Dispensary</p>
-                <h2 className='item-text-title'>E-commerce web app</h2>
+          <a href="https://cannabisfront.herokuapp.com/" target="_blank">
+            <div className = 'item'>
+              <div className = 'item-image' >
+                <img src={require('./../../../dist/img/items/dispensary.png')} alt = 'item2'/>
+              </div>
+            <div className = 'item-text' >
+              <div className = 'item-text-wrap' >
+                  <p className='item-text-category' > Dispensary </p>
+                  <h2 className = 'item-text-title' > E - commerce web app </h2>
+                </div>
               </div>
             </div>
-          </div>
-          {/* <div className='item'>
-            <div className='item-image'>
-              <img src={require('./../../../dist/img/items/item3.png')} alt='item3'/>
-            </div>
-            <div className='item-text'>
-              <div className='item-text-wrap'>
-                <p className='item-text-category'>Photography & Design</p>
-                <h2 className='item-text-title'>Vanishing</h2>
-              </div>
-            </div>
-          </div>
-          <div className='item'>
-            <div className='item-image'>
-              <img src={require('./../../../dist/img/items/item4.png')} alt='item4'/>
-            </div>
-            <div className='item-text'>
-              <div className='item-text-wrap'>
-                <p className='item-text-category'>Design</p>
-                <h2 className='item-text-title'>Gap Inc</h2>
-              </div>
-            </div>
-          </div>
-          <div className='item'>
-            <div className='item-image'>
-              <img src={require('./../../../dist/img/items/item5.png')} alt='item5'/>
-            </div>
-            <div className='item-text'>
-              <div className='item-text-wrap'>
-                <p className='item-text-category'>Mobile UI Design</p>
-                <h2 className='item-text-title'>Face The Experience</h2>
-              </div>
-            </div>
-          </div>
-          <div className='item'>
-            <div className='item-image'>
-              <img src={require('./../../../dist/img/items/item6.png')} alt='item6'/>
-            </div>
-            <div className='item-text'>
-              <div className='item-text-wrap'>
-                <p className='item-text-category'>Design Concept</p>
-                <h2 className='item-text-title'>Bezier Curves</h2>
-              </div>
-            </div>
-          </div>
-          <div className='item'>
-            <div className='item-image'>
-              <img src={require('./../../../dist/img/items/item7.png')} alt='item7'/>
-            </div>
-            <div className='item-text'>
-              <div className='item-text-wrap'>
-                <p className='item-text-category'>Photography</p>
-                <h2 className='item-text-title'>Dock Ponder</h2>
-              </div>
-            </div>
-          </div>
-          <div className='item'>
-            <div className='item-image'>
-              <img src={require('./../../../dist/img/items/item8.png')} alt='item8'/>
-            </div>
-            <div className='item-text'>
-              <div className='item-text-wrap'>
-                <p className='item-text-category'>Web Apps</p>
-                <h2 className='item-text-title'>Restaurant</h2>
-              </div>
-            </div>
-          </div>
-          <div className='item'>
-            <div className='item-image'>
-              <img src={require('./../../../dist/img/items/item9.png')} alt='item9'/>
-            </div>
-            <div className='item-text'>
-              <div className='item-text-wrap'>
-                <p className='item-text-category'>Social Network Concept</p>
-                <h2 className='item-text-title'>Friend Feed</h2>
-              </div>
-            </div>
-          </div> */}
+          </a>
         </div>
       </div>
     </section>
