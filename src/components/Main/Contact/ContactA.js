@@ -5,10 +5,9 @@ import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 
 import './ContactA.scss';
-import {message} from 'antd';
 import Success from '../../success/Success';
 
-const ContactA = (props) => {
+const ContactA = () => {
   const [success, setSuccess] = useState(false);
   const [ formValues, setFormValues ] = useState({});
   const phoneRegExp = /^\s*(?:\+?(\d{1,3}))?[- (]*(\d{3})[- )]*(\d{3})[- ]*(\d{4})(?: *[x/#]{1}(\d+))?\s*$/;

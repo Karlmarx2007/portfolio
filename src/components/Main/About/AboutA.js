@@ -1,7 +1,5 @@
 import React from 'react';
 import './AboutA.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 
 const AboutA = () => {
   return (

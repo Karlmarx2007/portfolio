@@ -9,7 +9,7 @@ const WorkA = () => {
         <div className='bottom-line'/>
         <p className='lead'>Checkout some of my work</p>
         <div className='items'>
-          <a href = "https://sc.qccareerschool.com/" target="_blank">
+          <a href = "https://sc.qccareerschool.com/" target="_blank" rel="noopener noreferrer">
             <div className = 'item' >
               <div className = 'item-image' >
                 <img src = {require('./../../../dist/img/items/qc.png')} alt = 'QC Career School'/>
@@ -22,7 +22,7 @@ const WorkA = () => {
               </div>
             </div>
           </a>
-          <a href="https://cannabisfront.herokuapp.com/" target="_blank">
+          <a href="https://cannabisfront.herokuapp.com/" target="_blank" rel="noopener noreferrer">
             <div className = 'item'>
               <div className = 'item-image' >
                 <img src={require('./../../../dist/img/items/dispensary.png')} alt = 'item2'/>

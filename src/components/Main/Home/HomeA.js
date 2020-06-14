@@ -8,7 +8,7 @@ const HomeA = () => {
       <div className='container'>
         <h2 className='section-title'>I Specilize in</h2>
         <div className='bottom-line'></div>
-        <p className='lead'>Web & Mobile Application Development</p>
+        <p className='lead'>Web Application Development</p>
         {/* <div className='specials'>
           <div>
             <FontAwesomeIcon icon="file-alt" size='2x' className='fas'/>
